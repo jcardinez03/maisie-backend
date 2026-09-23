@@ -19,8 +19,6 @@ class ReviewController extends Controller
             'name' => 'required',
             'product' => 'required',
             'rating' => 'required',
-            'image' => 'required|array',
-            'image.*' => 'required|mimes:jpg,jpeg,png,bmp'
         ]);
 
         DB::transaction(function() use($request){
