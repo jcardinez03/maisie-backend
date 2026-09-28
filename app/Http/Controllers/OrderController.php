@@ -25,7 +25,7 @@ class OrderController extends Controller
             'product_id' => 'required|integer|exists:products,id',
             'phone_number' => 'required|string',
             'image' => 'required|array',
-            'image.*' => 'required|mimes:jpg,jpeg,png,bmp'
+            'image.*' => 'required'
         ]);
 
         DB::transaction(function () use ($request) {
