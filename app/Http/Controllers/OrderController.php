@@ -50,14 +50,14 @@ class OrderController extends Controller
 
     public function index()
     {
-        $all_orders = $this->order->with('orderImages')->latest()->get();
+        $all_orders = $this->order->with('orderImages')->with('product')->latest()->get();
 
         return response()->json($all_orders);
     }
 
     public function show($id)
     {
-        $order = $this->order->with('orderImages')->findOrFail($id);
+        $order = $this->order->with('orderImages')->with('product')->findOrFail($id);
 
         return response()->json($order);
     }
