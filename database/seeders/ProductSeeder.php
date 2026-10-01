@@ -16,43 +16,29 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             [
                 'name' => 'Badge',
-                'category_id' => 1, // Accessories
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'name' => 'Pins',
-                'category_id' => 1, // Accessories
+                'category_id' => 1, 
+                'price' => 40,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Sintra Board',
-                'category_id' => 2, // Home & Decor
+                'category_id' => 1, 
+                'price' => 150,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Keychains',
-                'category_id' => 1, // Accessories
+                'name' => 'Mirror Keychain',
+                'category_id' => 2, 
+                'price' => 75,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Mirror Kaychains',
-                'category_id' => 2, // Home & Decor
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'name' => 'Photo Prints',
-                'category_id' => 4, // Photography
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'name' => 'Tote Bags',
-                'category_id' => 3, // Bags & Totes
+                'name' => 'Acrylic Keychains',
+                'category_id' => 1, 
+                'price' => 25,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
