@@ -41,7 +41,7 @@ class ReviewController extends Controller
 
     public function index()
     {
-        $all_reviews = $this->review->latest()->get();
+        $all_reviews = $this->review->with('reviewImages')->latest()->get();
 
         return response()->json($all_reviews);
     }
