@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('details');
             $table->string('status')
                 ->default('pending');
+            $table->integer('number_of_items');
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('products');

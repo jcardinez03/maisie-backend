@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('category_id');
+            $table->decimal('price', 10, 2);
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');

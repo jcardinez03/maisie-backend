@@ -34,6 +34,7 @@ class OrderController extends Controller
             $this->order->product_id = $request->product_id;
             $this->order->phone_number = $request->phone_number;
             $this->order->details = $request->details;
+            $this->order->number_of_items = $request->number_of_items;
             $this->order->save();
 
             $images = [];
@@ -60,5 +61,15 @@ class OrderController extends Controller
         $order = $this->order->with('orderImages')->with('product')->findOrFail($id);
 
         return response()->json($order);
+    }
+
+    public function updateStatus(Request $request, $order_id)
+    {
+        $order = $this->order->findOrFail($order_id);
+
+        $order->status = $request->status;
+        $order->save();
+
+        return response()->json($order, 201);
     }
 }
